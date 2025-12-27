@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página A5</title>
+
+<style>
+  @page {
+    size: A5;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  .pagina {
+    width: 14.8cm;
+    height: 21cm;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .caixa-texto {
+    position: absolute;
+    top: 4.3cm;
+    left: 1.5cm;
+    width: 11.8cm;
+    height: 13.7cm;
+    box-sizing: border-box;
+    padding: 0.8cm;
+    border: 1px dashed #999;
+  }
+
+  @media print {
+    body {
+      background: none;
+    }
+
+    .pagina {
+      box-shadow: none;
+    }
+
+    .caixa-texto {
+      border: none;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="pagina">
+    <div class="caixa-texto" contenteditable="true">
+      Digite seu texto aqui…
+    </div>
+  </div>
+</body>
+</html>
